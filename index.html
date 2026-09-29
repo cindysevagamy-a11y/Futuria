@@ -1,1 +1,166 @@
 
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FUTURIA — Tes vies possibles</title>
+
+<style>
+*{box-sizing:border-box}
+
+body{
+ margin:0;
+ background:linear-gradient(160deg,#090716,#17102e);
+ color:white;
+ font-family:Arial,sans-serif;
+ min-height:100vh;
+}
+
+main{
+ max-width:650px;
+ margin:auto;
+ padding:38px 22px;
+}
+
+.logo{
+ font-weight:900;
+ letter-spacing:4px;
+ font-size:20px;
+}
+
+.badge{
+ display:inline-block;
+ margin-top:45px;
+ padding:7px 12px;
+ border:1px solid #805ad5;
+ border-radius:30px;
+ color:#d8caff;
+ font-size:12px;
+}
+
+h1{
+ font-size:48px;
+ line-height:1;
+ margin:20px 0;
+}
+
+.gradient{
+ background:linear-gradient(90deg,#9f7aea,#f15bb5);
+ -webkit-background-clip:text;
+ color:transparent;
+}
+
+p{
+ color:#c6c0d8;
+ line-height:1.6;
+ font-size:17px;
+}
+
+button{
+ width:100%;
+ padding:17px;
+ margin-top:14px;
+ border:0;
+ border-radius:15px;
+ background:linear-gradient(90deg,#7c3aed,#ec4899);
+ color:white;
+ font-size:17px;
+ font-weight:bold;
+ cursor:pointer;
+}
+
+.card{
+ margin-top:25px;
+ padding:22px;
+ background:#171329;
+ border:1px solid #302747;
+ border-radius:20px;
+}
+
+.hidden{display:none}
+
+.result{
+ margin:22px 0;
+ padding-left:15px;
+ border-left:3px solid #9f7aea;
+}
+
+.result p{font-size:15px}
+
+.small{
+ text-align:center;
+ font-size:12px;
+ color:#817b92;
+}
+
+.disclaimer{
+ margin-top:50px;
+ text-align:center;
+ font-size:11px;
+ color:#777185;
+}
+</style>
+</head>
+
+<body>
+
+<main>
+
+<div class="logo">FUTURIA</div>
+
+<section id="home">
+
+<div class="badge">EXPÉRIENCE • VERSION TEST</div>
+
+<h1>
+Découvre tes
+<span class="gradient">3 vies possibles.</span>
+</h1>
+
+<p>
+Quelques choix. Trois trajectoires.
+Explore ce que tes décisions pourraient changer dans ta vie.
+</p>
+
+<button onclick="commencer()">
+✨ Explorer mon futur
+</button>
+
+<p class="small">
+Gratuit • environ 2 minutes • aucune inscription
+</p>
+
+</section>
+
+
+<section id="question" class="hidden card">
+
+<h2>Quel est ton objectif principal ?</h2>
+
+<button onclick="choisir('argent')">
+💰 Gagner plus d'argent
+</button>
+
+<button onclick="choisir('travail')">
+💼 Changer de travail ou de voie
+</button>
+
+<button onclick="choisir('projet')">
+🚀 Lancer un projet
+</button>
+
+<button onclick="choisir('quotidien')">
+🌱 Améliorer mon quotidien
+</button>
+
+<button onclick="choisir('apprendre')">
+📚 Apprendre et progresser
+</button>
+
+</section>
+
+
+<section id="choix" class="hidden card">
+
+<h
