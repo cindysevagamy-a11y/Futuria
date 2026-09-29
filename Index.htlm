@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FUTURIA — Tes vies possibles</title>
+
+<style>
+*{box-sizing:border-box}
+body{
+ margin:0;
+ font-family:Arial,sans-serif;
+ background:linear-gradient(160deg,#090716,#17102e);
+ color:white;
+ min-height:100vh;
+}
+main{max-width:650px;margin:auto;padding:35px 22px}
+.logo{font-weight:900;letter-spacing:4px}
+.badge{
+ display:inline-block;
+ margin-top:45px;
+ padding:7px 12px;
+ border:1px solid #805ad5;
+ border-radius:30px;
+ color:#d8caff;
+ font-size:12px;
+}
+h1{font-size:48px;line-height:1;margin:20px 0}
+.gradient{
+ background:linear-gradient(90deg,#9f7aea,#f15bb5);
+ -webkit-background-clip:text;
+ color:transparent;
+}
+p{color:#c6c0d8;line-height:1.6;font-size:17px}
+button{
+ width:100%;
+ padding:17px;
+ margin-top:18px;
+ border:0;
+ border-radius:15px;
+ background:linear-gradient(90deg,#7c3aed,#ec4899);
+ color:white;
+ font-size:17px;
+ font-weight:bold;
+}
+.card{
+ margin-top:25px;
+ padding:22px;
+ background:#171329;
+ border:1px solid #302747;
+ border-radius:20px;
+}
+select{
+ width:100%;
+ padding:14px;
+ margin-top:8px;
+ background:#0d0a18;
+ color:white;
+ border:1px solid #453963;
+ border-radius:12px;
+ font-size:16px;
+}
+label{display:block;margin-top:18px;font-weight:bold}
+.hidden{display:none}
+.result{
+ margin:18px 0;
+ padding-left:15px;
+ border-left:3px solid #9f7aea;
+}
+.result p{font-size:15px}
+.small{text-align:center;font-size:12px;color:#817b92}
+</style>
+</head>
+
+<body>
+<main>
+
+<div class="logo">FUTURIA</div>
+
+<section id="home">
+<div class="badge">EXPÉRIENCE • VERSION TEST</div>
+
+<h1>
+Découvre tes
+<span class="gradient">3 vies possibles.</span>
+</h1>
+
+<p>
+Quelques choix. Trois trajectoires.
+Explore ce que tes décisions pourraient changer dans ta vie.
+</p>
+
+<button onclick="commencer()">✨ Explorer mon futur</button>
+
+<p class="small">Gratuit • environ 2 minutes • aucune inscription</p>
+</section>
+
+
+<section id="question" class="hidden card">
+
+<h2>Commençons par toi</h2>
+
+<label>Quel est ton objectif principal ?</label>
+
+<select>
+<option>💰 Gagner plus d'argent</option>
+<option>💼 Changer de travail ou de voie</option>
+<option>🚀 Lancer un projet</option>
+<option>🌱 Améliorer mon quotidien</option>
+<option>📚 Apprendre et progresser</option>
+</select>
+
+<label>Dans combien de temps aimerais-tu voir un changement ?</label>
+
+<select>
+<option>3 mois</option>
+<option>6 mois</option>
+<option>1 an</option>
+</select>
+
+<button onclick="resultats()">Voir mes vies possibles →</button>
+
+</section>
+
+
+<section id="resultats" class="hidden">
+
+<div class="badge">SIMULATION FUTURIA</div>
+
+<h2>Tes 3 trajectoires possibles</h2>
+
+<div class="card">
+
+<div class="result">
+<h3>🌙 Vie 1 — Continuité</h3>
+<p>
+Tu continues principalement avec tes habitudes actuelles.
+Ton objectif reste possible, mais les changements peuvent être progressifs.
+</p>
+</div>
+
+<div class="result">
+<h3>✨ Vie 2 — Progression</h3>
+<p>
+Tu mets en place plusieurs petites actions régulières.
+Avec le temps, elles peuvent créer une évolution importante.
+</p>
+</div>
+
+<div class="result">
+<h3>🚀 Vie 3 — Ambition</h3>
+<p>
+Tu testes davantage d'opportunités et consacres plus d'énergie
+à ton objectif. Le potentiel de changement augmente,
+mais l'incertitude aussi.
+</p>
+</div>
+
+</div>
+
+<button onclick="recommencer()">↻ Refaire la simulation</button>
+
+</section>
+
+
+<p class="small" style="margin-top:50px">
+FUTURIA est une expérience de simulation et de divertissement.
+Les résultats sont hypothétiques et ne prédisent pas l'avenir.
+</p>
+
+</main>
+
+<script>
+
+function commencer(){
+ document.getElementById("home").classList.add("hidden");
+ document.getElementById("question").classList.remove("hidden");
+ window.scrollTo(0,0);
+}
+
+function resultats(){
+ document.getElementById("question").classList.add("hidden");
+ document.getElementById("resultats").classList.remove("hidden");
+ window.scrollTo(0,0);
+}
+
+function recommencer(){
+ document.getElementById("resultats").classList.add("hidden");
+ document.getElementById("home").classList.remove("hidden");
+ window.scrollTo(0,0);
+}
+
+</script>
+
+</body>
+</html>
